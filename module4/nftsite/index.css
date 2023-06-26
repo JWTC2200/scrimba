@@ -1,0 +1,98 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #2b283a;
+}
+
+header {
+    background-color: #5f29a3;
+}
+
+footer {
+    text-align: center;
+    color: #5f29a3;
+}
+
+header, section, footer {
+    padding: 45px 0; 
+}
+
+h1 {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0px;
+}
+
+h3 {
+    color: #d0aaff;
+    margin: 0;
+    font-size: 20px;
+}
+
+p {
+    line-height: 23px;
+}
+
+a {
+    color: #ef5839;
+    text-decoration: underline dotted;
+}
+
+a:hover, a:active  {
+    color: #d4b44c
+}
+
+.container {
+    width: 620px;
+    margin: 0 auto;
+}@
+ 
+.bg--purple {
+    background-color: #5f29a3;
+    color: whitesmoke;
+}
+
+.img--container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main--image {
+    max-width: 100%;
+}
+
+.small--image {
+    width: 300px; 
+    border-radius: 4.6px;
+}
+
+.btn {
+    border: none;
+    border-radius: 4.6px;
+    padding: 10px 19px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover, .btn:active {
+    background-color: #f3e885;
+    color: #2b293a
+}
+
+.bg--lilac {
+    background-color: #f0e0ff;
+    color: #5f29a3;
+}
+
+.bg--white {
+    background-color: whitesmoke;
+    color: #5f29a3;
+}
