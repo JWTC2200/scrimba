@@ -119,6 +119,18 @@ header {
     padding-bottom: 30px;
 }
 
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
 input {
     height: 72px;
     width: 100%;
@@ -134,6 +146,15 @@ input {
     color: white;
     font-weight: bold;
     background-color: #16DB99;
+    cursor: pointer;
+}
+
+.order-completed {
+    background-color: #ECFDF5;
+    color: #065F46;
+    margin: 0 30px;
+    text-align: center;
+    padding: 30px;
 }
 
 /* Change font size and color */
