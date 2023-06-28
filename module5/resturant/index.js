@@ -10,12 +10,13 @@ let orderList = []
 document.addEventListener("click", (event) => {
     event.target.classList.contains("add-button") && addToOrder(event.target.id)
     event.target.classList.contains("remove-btn") && removeFromOrder(event.target.id)
-    event.target.classList.contains("complete-order-btn") && paymentDetails()
+    event.target.classList.contains("complete-order-btn") && showModal()
+    event.target.classList.contains("modal-close") && showModal()
 })
 
 document.addEventListener("submit", (event) => {
     event.preventDefault()
-    console.log(1234)
+    handlePayment(event)
 }
 )
 
@@ -36,8 +37,21 @@ function removeFromOrder(id) {
     renderOrderList()
 }
 
-function paymentDetails() {
-    modal.hidden = false
+function handlePayment(event) {
+    const username = document.getElementById("username").value
+    orderFormEl.innerHTML = `
+        <div class="order-completed">
+            Thanks, ${username}! Your order is on its way!
+        </div>
+    `
+    document.getElementById("username").value = ""
+    document.getElementById("card-number").value = ""
+    document.getElementById("card-cvv").value = ""
+    showModal()
+}
+
+function showModal() {
+    modal.hidden = !modal.hidden
 }
 
 function renderOrderList() {
