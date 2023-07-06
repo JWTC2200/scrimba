@@ -1,0 +1,44 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* selectors */
+
+.bold {
+    font-weight: bold;
+}
+
+/* body styling */
+
+body{
+    margin: 0 auto;
+    max-width: 800px;
+    border: 2px dotted green;
+}
+
+/* Header styling */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    height: 4em;
+}
+
+.main-title {
+}
+
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5em;
+}
