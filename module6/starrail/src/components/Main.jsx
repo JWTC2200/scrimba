@@ -14,15 +14,13 @@ export default function Main() {
                 id={entry.id} 
                 className="character-post"
             >
-                <div className="post-container">
-                    <img className="post-splash" src={splashPath}></img>
-                    <div className="post-title">
-                        <h1>{entry.name}</h1>
-                        <img className="type-icon" src={typePath}></img>
-                    </div>
-                    {storyElements}
-                    <img className="post-quote" src={quotePath}></img>
+                <img className="post-splash" src={splashPath}></img>
+                <div className="post-title">
+                    <h1>{entry.name}</h1>
+                    <img className="type-icon" src={typePath}></img>
                 </div>
+                {storyElements}
+                <img className="post-quote" src={quotePath}></img>
                 
             </div>
         )
@@ -31,7 +29,10 @@ export default function Main() {
     return(
         <main>
             {/* <img src="./src/images/bg_starrail.png"></img> */}
-            {postElements}
+            <div className="grid-container">
+                {postElements}
+            </div>
+            
         </main>
     )
 }
