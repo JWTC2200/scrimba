@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+/* Fonts */
+
+@font-face {
+    font-family: "DIN";
+    src: url("./fonts/DIN.ttf");
+}
+
 /* selectors */
 
 .bold {
@@ -12,14 +19,15 @@ p {
     margin: 0.2em 0;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
 /* body styling */
 
 body{
-    /* font-size: 1.2rem; */
+    font-family: "DIN", sans-serif;
+    font-size: 1.2rem;
     margin: 0 auto;
     max-width: 1000px;
     min-width: 300px;
@@ -27,6 +35,11 @@ body{
     background-position: cover;
     background-attachment: fixed;
     color: white;
+}
+
+.home {
+    background-color: white;
+    color: black;
 }
 
 /* Header styling */
@@ -58,8 +71,9 @@ nav > ul {
     cursor: pointer;
 }
 
-.link:hover {
-    color: pink;
+.link:hover,
+.link:focus {
+    color: rgb(121, 10, 29);
 }
 
 /* Main styling */
@@ -93,10 +107,13 @@ main {
     margin-right: auto;
 }
 
+
+
 .character-post {
     display: flex;
     flex-direction: column;
     position: relative;
+    grid-area: "post";
 }
 
 .post-splash {
@@ -129,19 +146,28 @@ main {
 
 .type-icon {
     height: 2em;
+    padding: 2px;
+    border: white 2px solid;
+    border-radius: 50%;
 }
 
 .post-container > p {
     margin-bottom: 0.5rem;
 }
 
+.character-title {
+    text-align: center;
+}
+
 .grid-container {
     margin: 0 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+
 }
 
 @media (min-width: 600px) {
     .grid-container {
-        display: grid;
         grid-template-columns: minmax(275px, 1fr) minmax(275px, 1fr);
         gap: 1em;
     }
@@ -149,8 +175,7 @@ main {
 
 @media (min-width: 900px) {
     .grid-container {
-        display: grid;
-        grid-template-columns: minmax(275px, 1fr) minmax(275px, 1fr) minmax(275px, 1fr) ;
+        grid-template-columns: minmax(275px, 1fr) minmax(275px, 1fr) minmax(275px, 1fr);
         gap: 1em;
     }
 }

@@ -30,7 +30,7 @@ export default function Main(props) {
     const heroElements = 
         <div className={heroClasses}>
             <div className="hero-text">
-                <h1>My responsive page</h1>
+                <h2>My responsive page</h2>
                 <p>This page was made to practice my responsive design skills. </p>
             </div>            
             <img className="hero-image" src="./src/images/bg_honkaiwp2.png"></img>
@@ -42,9 +42,10 @@ export default function Main(props) {
         </div>
 
     return(
-        <main>
+        <main className={props.page}>
             {props.page != "about" && heroElements}
-            <div className="grid-container">
+            <h2 className="character-title">Characters</h2>
+            <div className="grid-container">                
                 {postElements}
             </div> 
         </main>
