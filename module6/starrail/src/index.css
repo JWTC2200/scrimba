@@ -6,12 +6,20 @@
 
 .bold {
     font-weight: bold;
-    
+}
+
+p { 
+    margin: 0.2em 0;
+}
+
+h1 {
+    margin: 0;
 }
 
 /* body styling */
 
 body{
+    /* font-size: 1.2rem; */
     margin: 0 auto;
     max-width: 1000px;
     min-width: 300px;
@@ -27,7 +35,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.5em;
+    padding: 0 2em;
+    background-color: black;
 }
 
 .nav-title {
@@ -39,30 +48,62 @@ nav {
     height: 4em;
 }
 
-.main-title {
-}
-
 nav > ul {
     list-style-type: none;
     display: flex;
     gap: 0.5em;
 }
 
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    color: pink;
+}
+
 /* Main styling */
+
+main {
+    padding: 0;
+}
+
+.hero-container {
+    margin-bottom: 2em;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-index {
+    position: relative;
+}
+
+.hero-index > .hero-text {
+    padding: 0.25em;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    min-width: 40vw;
+    position: absolute;
+    bottom: -1em;
+    left: 5vw;
+    margin-left: auto; 
+    margin-right: auto;
+}
 
 .character-post {
     display: flex;
     flex-direction: column;
-    padding: 1em;
     position: relative;
 }
-
 
 .post-splash {
     display: block;
     width: 100%;
     max-width: 400px;
-    max-height: 10em;
+    max-height: 12em;
     object-fit: cover;
     margin: 0 auto;
 }
@@ -71,7 +112,7 @@ nav > ul {
     width: 100%;
     max-width: 400px;
     position: absolute;
-    top: 6em;
+    top: 8em;
     left: 0; 
     right: 0; 
     margin-left: auto; 
@@ -82,11 +123,7 @@ nav > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-    margin: 0;
-}
-
-.post-title > h1 {
+    padding: 0 1rem;
     margin: 0;
 }
 
@@ -98,16 +135,22 @@ nav > ul {
     margin-bottom: 0.5rem;
 }
 
+.grid-container {
+    margin: 0 1em;
+}
+
 @media (min-width: 600px) {
     .grid-container {
         display: grid;
-        grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+        grid-template-columns: minmax(275px, 1fr) minmax(275px, 1fr);
+        gap: 1em;
     }
 }
 
 @media (min-width: 900px) {
     .grid-container {
         display: grid;
-        grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr);
+        grid-template-columns: minmax(275px, 1fr) minmax(275px, 1fr) minmax(275px, 1fr) ;
+        gap: 1em;
     }
 }

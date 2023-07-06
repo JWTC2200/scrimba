@@ -1,12 +1,12 @@
 import {charData} from "../data/chardata.js"
 
-export default function Main() {
+export default function Main(props) {
 
     const postElements = charData.map(entry => {
         const splashPath = `./src/images/splash_${entry.fileID}.png`
         const quotePath = `./src/images/quote_${entry.fileID}.png`
         const typePath = `./src/images/icon_${entry.type}.png`
-        const storyElements = entry.story.map(line => <p>{line}</p>)
+        const storyElements = entry.story.map(line => <p key={line} className="story">{line}</p>)
 
         return (
             <div 
@@ -20,19 +20,33 @@ export default function Main() {
                     <img className="type-icon" src={typePath}></img>
                 </div>
                 {storyElements}
-                <img className="post-quote" src={quotePath}></img>
-                
+                <img className="post-quote" src={quotePath}></img>                
             </div>
         )
     })
 
+    const heroClasses = `hero-container hero-${props.page}`
+
+    const heroElements = 
+        <div className={heroClasses}>
+            <div className="hero-text">
+                <h1>My responsive page</h1>
+                <p>This page was made to practice my responsive design skills. </p>
+            </div>            
+            <img className="hero-image" src="./src/images/bg_honkaiwp2.png"></img>
+        </div>
+
+    const homeElements = 
+        <div>
+            HOME
+        </div>
+
     return(
         <main>
-            {/* <img src="./src/images/bg_starrail.png"></img> */}
+            {props.page != "about" && heroElements}
             <div className="grid-container">
                 {postElements}
-            </div>
-            
+            </div> 
         </main>
     )
 }
