@@ -5,7 +5,7 @@ export default function Header(props) {
         <header>
             <nav>
                 <div className="nav-title link" key="index" onClick={() => props.handleChange("index")}>
-                    <img className="header-icon" src="./src/images/icon_starrail.png"></img>
+                    <img className="header-icon" src="images/icon_starrail.png"></img>
                     <h1 className="main-title" >Honkai Star Rail</h1>
                 </div>              
                 <ul>
