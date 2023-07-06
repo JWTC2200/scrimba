@@ -3,9 +3,9 @@ import {charData} from "../data/chardata.js"
 export default function Main(props) {
 
     const postElements = charData.map(entry => {
-        const splashPath = `/src/images/splash_${entry.fileID}.png`
-        const quotePath = `/src/images/quote_${entry.fileID}.png`
-        const typePath = `/src/images/icon_${entry.type}.png`
+        const splashPath = `./src/images/splash_${entry.fileID}.png`
+        const quotePath = `./src/images/quote_${entry.fileID}.png`
+        const typePath = `./src/images/icon_${entry.type}.png`
         const storyElements = entry.story.map(line => <p key={line} className="story">{line}</p>)
 
         return (
@@ -33,7 +33,7 @@ export default function Main(props) {
                 <h2>My responsive page</h2>
                 <p>This page was made to practice my responsive design skills. </p>
             </div>            
-            <img className="hero-image" src="/src/images/bg_honkaiwp2.png"></img>
+            <img className="hero-image" src="./src/images/bg_honkaiwp2.png"></img>
         </div>
 
     const homeElements = 
