@@ -17,10 +17,11 @@
 
 p { 
     margin: 0.2em 0;
+    font-size: 1.25rem;
 }
 
-h1, h2 {
-    margin: 0;
+h1, h2, h3 {
+    margin: 0.5em 0 0.25em 0;
 }
 
 /* body styling */
@@ -58,7 +59,7 @@ nav {
 }
 
 .header-icon {
-    height: 4em;
+    height: 3em;
 }
 
 nav > ul {
@@ -73,7 +74,8 @@ nav > ul {
 
 .link:hover,
 .link:focus {
-    color: rgb(121, 10, 29);
+    color: pink;
+    text-decoration: underline;
 }
 
 /* Main styling */
@@ -94,6 +96,10 @@ main {
     position: relative;
 }
 
+.hero-text {
+    margin: 0 1.5em;
+}
+
 .hero-index > .hero-text {
     padding: 0.25em;
     border-radius: 8px;
@@ -101,13 +107,11 @@ main {
     max-width: 600px;
     min-width: 40vw;
     position: absolute;
-    bottom: -1em;
+    bottom: -0.5em;
     left: 5vw;
     margin-left: auto; 
     margin-right: auto;
 }
-
-
 
 .character-post {
     display: flex;

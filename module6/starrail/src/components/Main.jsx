@@ -32,18 +32,23 @@ export default function Main(props) {
             <div className="hero-text">
                 <h2>My responsive page</h2>
                 <p>This page was made to practice my responsive design skills. </p>
-            </div>            
-            <img className="hero-image" src="/images/bg_honkaiwp2.png"></img>
-        </div>
-
-    const homeElements = 
-        <div>
-            HOME
+            </div>
+            {props.page === "index" && <img className="hero-image" src="/images/bg_honkaiwp2.png"></img>}
+            {props.page === "home" && <img className="hero-image" src="/images/logo_starrail_white.png"></img>}        
+            {props.page != "index" && 
+                <div className="hero-text">
+                    <h3>Why this site?</h3>
+                    <p>I've been going through the Scrimba front-end developer course for a couple months now. I discovered it after looking for React courses and decided to jump straight into that.</p>        
+                    <p>After completing the basic React course I felt that my knowledge of CSS and Javascript had quite a few gaps. Going back over the basic modules helped me improve a lot and it led to this site.</p>
+                    <p>This is my take on the responsive webdesign solo project. Not the learning journal they suggested but something closer to my gaming interests at this time.</p>
+                    <p>This site uses CSS grid and media to display character info from the game Honkai Star rail. I also used Vite and React to make the site as practice.</p>
+                </div>
+            }                     
         </div>
 
     return(
         <main className={props.page}>
-            {props.page != "about" && heroElements}
+            {heroElements}
             <h2 className="character-title">Characters</h2>
             <div className="grid-container">                
                 {postElements}
