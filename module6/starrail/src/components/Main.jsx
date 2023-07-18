@@ -16,7 +16,7 @@ export default function Main(props) {
             >
                 <img className="post-splash" src={splashPath}></img>
                 <div className="post-title">
-                    <h1>{entry.name}</h1>
+                    <h3>{entry.name}</h3>
                     <img className="type-icon" src={typePath}></img>
                 </div>
                 {storyElements}
@@ -49,7 +49,7 @@ export default function Main(props) {
     return(
         <main className={props.page}>
             {heroElements}
-            <h2 className="character-title">Characters</h2>
+            <h1 className="character-title">Characters</h1>
             <div className="grid-container">                
                 {postElements}
             </div> 
