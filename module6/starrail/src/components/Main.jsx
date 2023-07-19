@@ -16,8 +16,8 @@ export default function Main(props) {
             >
                 <img className="post-splash" src={splashPath}></img>
                 <div className="post-title">
-                    <h3>{entry.name}</h3>
                     <img className="type-icon" src={typePath}></img>
+                    <h2>{entry.name}</h2>                    
                 </div>
                 {storyElements}
                 <img className="post-quote" src={quotePath}></img>                
