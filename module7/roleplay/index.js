@@ -1,23 +1,48 @@
 import characterData from "./jsdata/characterData.js";
 import Character  from "./jsdata/Character.js";
-import { getDicePlaceholderHtml } from "./jsdata/utils.js";
+
+let monstersArray = ["orc", "demon", "goblin"]
+let isWaiting = false
+
+function getNewMonster() {
+   const nextMonsterData = characterData[monstersArray.shift()]
+   return nextMonsterData ? new Character(nextMonsterData) : {}
+}
+
 
 function Attack() {
-   wizard.getDiceHtml()
-   orc.getDiceHtml()
-   wizard.takeDamage(orc.currentDiceScore)
-   orc.takeDamage(wizard.currentDiceScore)
-   if(orc.dead || wizard.dead) {
-      endGame()
+   if(!isWaiting){
+       wizard.getDiceHtml()
+       monster.getDiceHtml()
+       wizard.takeDamage(monster.currentDiceScore)
+       monster.takeDamage(wizard.currentDiceScore)
+       render()
+       
+       if(wizard.dead){
+           endGame()
+       }
+       else if(monster.dead){
+           isWaiting = true
+           if(monstersArray.length > 0){
+               setTimeout(()=>{
+                   monster = getNewMonster()
+                   render()
+                   isWaiting = false
+               },1500)
+           }
+           else{
+               endGame()
+           }
+       }    
    }
-   render()
+
 }
 
 function endGame() {
-   const endMessage = wizard.dead && orc.dead ?
+   const endMessage = wizard.dead && monster.dead ?
       "No victors - all creatures are dead" : 
-      wizard.dead ? "The Orc is Victorious" : "The Wizard Wins"
-   const endEmoji = wizard.dead && orc.dead ? 
+      wizard.dead ? `The monster is Victorious` : "The Wizard Wins"
+   const endEmoji = wizard.dead && monster.dead ? 
       "☠️☠️" : 
       wizard.dead ? "☠️" : "🔮"
    document.body.innerHTML = `
@@ -29,13 +54,13 @@ function endGame() {
 }
 
 function render() {
-   document.getElementById(wizard.elementId).innerHTML = wizard.getCharacterHtml();
-   document.getElementById(orc.elementId).innerHTML = orc.getCharacterHtml();
+   document.getElementById("hero").innerHTML = wizard.getCharacterHtml();
+   document.getElementById("monster").innerHTML = monster.getCharacterHtml();
 }
 
-/*Does something here need to change?*/
 const wizard = new Character(characterData.hero)
-const orc = new Character(characterData.monster)
+let monster = getNewMonster()
+
 render()
 
 document.getElementById("attack-button").addEventListener("click", Attack)
