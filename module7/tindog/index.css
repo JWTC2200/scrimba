@@ -1,0 +1,101 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 550px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header properties */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icon {
+    height: 34px;
+    margin: 10px;
+}
+
+.header-logo {
+    height: 42px;
+    margin: 20px 0;
+}
+
+/* main properties */
+
+/* main image properties */
+
+.img-container {
+    position: relative;
+}
+
+.thedog { 
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 535px;
+}
+
+.stamp {
+    position: absolute;
+    width: 230px;
+    transform: rotate(-30deg);
+    top: 55px;
+    left: 20px;
+}
+
+.text-box {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.dog-info {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.dog-flavour {
+    font-size: 24px;
+    color: #B7B7B7;
+}
+
+
+/* main button properties */
+
+.button-div,
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #B7B7B7;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+.btn-cross:hover {
+    box-shadow: 0 0 20px #FFE7EF;
+    background-color: #FFE7EF;
+}
+
+.btn-heart:hover {
+    box-shadow: 0 0 20px #DBFFF4;
+    background-color: #DBFFF4;
+}
+
+.btn-logo {
+    width: 26px;;
+}

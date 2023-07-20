@@ -1,8 +1,37 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <script src="/index.js" type="module"></script>
+        <header>
+            <img class="header-icon" src="./images/icon-profile.png">
+            <img class="header-logo" src="./images/logo.png">
+            <img class="header-icon" src="./images/icon-chat.png">
+        </header>
+        <main>
+            <div class="img-container">
+                <img class="thedog" src="./images/dog-teddy.jpg">
+                <img class="stamp" src="./images/badge-like.png">
+                <div class="text-box">
+                    <div class="dog-info">Teddy, 30</div>
+                    <div class="dog-flavour">How you doin?</div>
+                </div>
+            </div>
+            
+            <div class="button-div">
+                <div class="btn-container btn-cross">
+                    <img class="btn-logo" src="./images/icon-cross.png">                    
+                </div>
+                <div class="btn-container btn-heart">
+                    <img class="btn-logo" src="./images/icon-heart.png">
+                </div>
+            </div>
+        </main>
+        <script src="index.js" type="module"></script>
     </body>
 </html>
