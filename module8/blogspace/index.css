@@ -1,0 +1,45 @@
+body {
+    max-width: 600px;
+    display: grid;
+    font-family: 'Edu SA Beginner', cursive;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav {
+    max-width: 600px;
+    background-color: beige;
+    padding: 10px 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav > h3 {
+    margin: 0;
+}
+
+#post-container {
+    margin: 0;
+    padding: 10px;
+    background-color: azure;
+}
+
+form {
+    padding: 60px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    margin: 0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 4px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: red;
+    display: inline-block;
+    border: 2px black solid;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
