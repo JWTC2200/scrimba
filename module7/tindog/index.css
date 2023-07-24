@@ -31,11 +31,11 @@ header {
 
 /* main image properties */
 
-.img-container {
+#img-container {
     position: relative;
 }
 
-.thedog { 
+.dog-image { 
     border-radius: 15px;
     margin: 0 auto;
     width: 535px;
@@ -62,7 +62,7 @@ header {
     color: white;
 }
 
-.dog-flavour {
+.dog-bio {
     font-size: 24px;
     color: #B7B7B7;
 }
@@ -86,12 +86,12 @@ header {
     cursor: pointer;
 }
 
-.btn-cross:hover {
+#btn-cross:hover {
     box-shadow: 0 0 20px #FFE7EF;
     background-color: #FFE7EF;
 }
 
-.btn-heart:hover {
+#btn-heart:hover {
     box-shadow: 0 0 20px #DBFFF4;
     background-color: #DBFFF4;
 }
