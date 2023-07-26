@@ -18,8 +18,7 @@ function fetchColors(color, mode) {
     .then(data => {
         const colorArray = data.colors.map(result => result.hex.value)
         renderColors(colorArray)
-    }
-    )
+    })
 }
 
 renderColors(baseColors)

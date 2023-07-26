@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <button id="new-deck">New Deck</button>
+        <div class="container">
+            <div>Remaining cards: <span id="cards-remaining">0</span></div>
+            <h1>War!</h1>
+            <h3 id="result-title">Draw a card to play!</h3>
+            <h3>Computer: <span id="pc-score">0</span></h3>
+            <div class="card-outline" id="card1"></div>
+            <div class="card-outline bottom-card" id="card2"></div>
+            <h3>Me: <span id="player-score">0</span></h3>
+        </div>
+        <button id="draw-cards" disabled>Draw</button>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>

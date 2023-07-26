@@ -1,0 +1,63 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(160, 103, 103);
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(26, 82, 26);
+    position: relative;
+    max-width: 550px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+button {
+    background-color: yellow;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+#new-deck {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#draw-cards {
+    width: 100%;
+    max-width: 550px;
+    font-size: 2rem;
+}
+
+.card-outline {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-size: cover;
+    width: 10em;
+    aspect-ratio: 5 / 7;
+}
+
+.bottom-card {
+    margin-top: 50px;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    width: 10em;
+    padding: 0;
+    margin: 0;
+}
