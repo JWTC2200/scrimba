@@ -1,10 +1,158 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: black;
 }
 
 body {
     max-width: 550px;
     margin: 0 auto;
     border: 1px dotted purple;
+}
+
+
+/* nav styling  */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;;
+    padding:  0;
+    width: 460px;
+}
+
+h1 {
+    font-size: 2.625rem;
+}
+
+a {
+    font-size: 0.875rem;
+}
+
+/* search bar */
+
+form {
+    font-size: 0.875rem;
+    width: 460px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+input {
+    width: 100%;
+}
+
+.search-icon {
+    padding-left: 15px;
+    padding-right: 6px;
+    height: 0.875em;
+    
+}
+
+button {
+    padding: 10px 40px;
+    background-color: #4B4B4B;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+input, button {
+    border: none;
+    border-radius: 0 8px 8px 0;
+}
+
+/* main styling  */
+
+main {
+    margin: 50px 0px 0px 0px;
+    padding: 0;
+}
+
+/* movie details */
+
+.movie-container {
+    display: flex;
+    margin: 0 45px 10px 45px;
+    padding-bottom: 20px;
+    border-bottom: 1px gray solid;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 150px;
+    margin-left: 20px;
+}
+
+.movie-title { 
+    display: flex;
+    align-items: center;
+}
+
+.movie-title > h3 {
+    font-size: 1.125rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.movie-title > p {
+    font-size: .75rem;
+}
+
+.movie-info {
+    display: flex;
+    gap: 3em;
+    font-size: 0.75rem;
+}
+
+.movie-info > p {
+    margin: 0;
+}
+
+/* watchlist button  */
+
+.watchlist {
+    display: flex;
+}
+
+.add-button {
+    height: 0.75em;
+    padding: 0.25em;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 0.4em;
+    cursor: pointer;
+}
+
+.movie-plot {
+    font-size: 0.875rem;
+}
+
+
+/* colors  */
+
+input, .movie-plot {
+    color: #A5A5A5
+}
+
+form, input {
+    background-color: #3d3737;
 }

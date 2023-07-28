@@ -3,9 +3,43 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <nav>
+            <h1>Find your film</h1>
+            <a>My watchlist</a>
+            <form id="search-form">
+                <label for="search-input">
+                    <img src="./images/search.png" class="search-icon">
+                </label>
+                <input type="text" id="search-input">
+                <button>Search</button>
+            </form>
+        </nav>
+        <main id="main">
+            <div class="movie-container">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" class="movie-poster">
+                <div class="movie-details">
+                    <div class="movie-title">
+                        <h3>Blade Runner</h3>
+                        <p>⭐ 8.1</p>
+                    </div>
+                    <div class="movie-info">
+                        <p>117 min</p>
+                        <p>Action, Drama, Sci-Fi</p>
+                        <p class="watchlist"><img src="./images/plus.png" class="add-button">watchlist</p>
+                    </div>
+                    <p class="movie-plot">
+                        A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.
+                    </p>
+                </div>
+            </div>
+        </main>
         <script src="index.js" type="module"></script>
     </body>
 </html>
