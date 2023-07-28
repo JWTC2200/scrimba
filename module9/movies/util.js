@@ -5,15 +5,31 @@ async function search(term) {
     const data = await res.json()
     const idArray = data.Search.slice(0, 5).map(movie => movie.imdbID)
     renderMovies(idArray)
-    // renderMovies(data.Search.slice(0, 5))
 }
 
-function renderMovies(idArray) {
-    console.log(idArray)
+async function renderMovies(idArray) {
     mainEl.innerHTML = ""
-    idArray.forEach(movie => {
-        getMovie(movie)
-    })
+    if (!idArray.length) {
+        if (window.location.toString().includes("index")) {
+            mainEl.innerHTML = `
+                <div class="empty-page">
+                    START EXPLORING
+                </div>
+            `
+        } else {
+            mainEl.innerHTML = `
+                <div class="empty-page">
+                    <p>Your watchlist is looking a little empty</p>
+                    <a href="./index.html"><img src="./images/plus.png" class="add-icon">Lets add some movies</a>
+                </div>
+        `
+        }       
+    } else {
+        idArray.forEach(movieID => {
+            getMovie(movieID)
+        })
+    }
+    
 }
 
 async function getMovie(movieID) {
@@ -24,13 +40,32 @@ async function getMovie(movieID) {
 
 function movieHTML(data) {
     let watchListButton = `
-        <p class="watchlist">
-            <button class="add-button" value=${data.imdbID}>
-                <img src="./images/plus.png" class="add-icon">
-            </button> 
-            watchlist
-        </p>
-    `
+            <p class="watchlist">
+                <button class="add-button" value=${data.imdbID}>
+                    <img src="./images/minus.png" class="add-icon">
+                </button> 
+                Remove
+            </p>
+        `
+    if(window.location.toString().includes("index")) {
+        if( JSON.parse(localStorage.getItem("movieWatchlist")).includes(data.imdbID) ) {
+            watchListButton = `
+                <p class="watchlist">
+                    Already added
+                </p>
+            `
+        } else {
+            watchListButton = `
+                <p class="watchlist">
+                    <button class="add-button" value=${data.imdbID}>
+                        <img src="./images/plus.png" class="add-icon">
+                    </button> 
+                    watchlist
+                </p>
+            `
+        }
+    }
+
     return `
         <div class="movie-container">
             <img src=${data.Poster} class="movie-poster">
@@ -52,10 +87,24 @@ function movieHTML(data) {
     `
 }
 
+function editWatchlist(id) {
+    const getLocal = localStorage.getItem("movieWatchlist")
+    const localArray = JSON.parse(getLocal)
+    if(!localArray.includes(id)) {
+        localArray.push(id)
+        localStorage.setItem("movieWatchlist", JSON.stringify(localArray))
+    } else {
+        const removedArray = localArray.filter(movie =>
+            movie !== id
+        )
+        localStorage.setItem("movieWatchlist", JSON.stringify(removedArray))
+    }
+}
 
 export {
     search,
-    renderMovies
+    renderMovies,
+    editWatchlist,
 }
 
 
