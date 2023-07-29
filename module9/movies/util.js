@@ -3,26 +3,30 @@ const mainEl = document.getElementById("main")
 async function search(term) {
     const res = await fetch(`http://www.omdbapi.com/?s=${term}&apikey=f3878b8c`)
     const data = await res.json()
-    const idArray = data.Search.slice(0, 5).map(movie => movie.imdbID)
-    renderMovies(idArray)
+    console.log(data)
+    if (data.Response === "True") {
+        const idArray = data.Search.slice(0, 5).map(movie => movie.imdbID)
+        renderMovies(idArray)
+    } else {
+        mainEl.innerHTML = `
+            <div class="empty-page">
+                <p>Unable to find what you're looking for. Please try another search.</p>
+            </div>
+        `
+    }
+    
 }
 
 async function renderMovies(idArray) {
     mainEl.innerHTML = ""
     if (!idArray.length) {
-        if (window.location.toString().includes("index")) {
+        if (window.location.toString().includes("watchlist")) {
             mainEl.innerHTML = `
                 <div class="empty-page">
-                    START EXPLORING
-                </div>
-            `
-        } else {
-            mainEl.innerHTML = `
-                <div class="empty-page">
-                    <p>Your watchlist is looking a little empty</p>
+                    <p>Your watchlist is looking a little empty...</p>
                     <a href="./index.html"><img src="./images/plus.png" class="add-icon">Lets add some movies</a>
                 </div>
-        `
+            `
         }       
     } else {
         idArray.forEach(movieID => {
@@ -42,7 +46,7 @@ function movieHTML(data) {
     let watchListButton = `
             <p class="watchlist">
                 <button class="add-button" value=${data.imdbID}>
-                    <img src="./images/minus.png" class="add-icon">
+                    <img src="./images/minus.png" class="remove-icon">
                 </button> 
                 Remove
             </p>
@@ -105,6 +109,7 @@ export {
     search,
     renderMovies,
     editWatchlist,
+    mainEl,
 }
 
 

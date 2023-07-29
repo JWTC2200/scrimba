@@ -21,8 +21,8 @@ nav {
     align-items: center;
     position: relative;
     margin: 0 auto;;
-    padding:  0;
-    width: 460px;
+    padding: 0 47px;
+    background-color: grey;
 }
 
 h1 {
@@ -52,6 +52,12 @@ form {
 
 input {
     width: 100%;
+    margin: 0px 10px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
 }
 
 .search-icon {
@@ -68,7 +74,7 @@ input {
     cursor: pointer;
 }
 
-input, .search-button {
+.search-button {
     border: none;
     border-radius: 0 8px 8px 0;
 }
@@ -143,7 +149,8 @@ main {
     width: 1px;
 }
 
-.add-icon {
+.add-icon,
+.remove-icon {
     height: 0.75em;
     padding: 0.25em;
     background-color: white;
@@ -151,6 +158,14 @@ main {
     border-radius: 50%;
     margin-right: 0.4em;
     cursor: pointer;
+}
+
+.add-icon:hover {
+    background-color: palegreen;
+}
+
+.remove-icon:hover {
+    background-color: palevioletred;
 }
 
 .movie-plot {
@@ -171,7 +186,9 @@ form, input {
 /* page empty styles */
 
 .empty-page {
+    max-width: 350px;
     margin: 0 auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
