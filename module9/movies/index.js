@@ -1,5 +1,5 @@
 import {testSearch, testID} from "./data.js"
-import { search, editWatchlist, renderMovies } from "./util.js"
+import { search, editWatchlist, renderMovies, mainEl } from "./util.js"
 
 const form = document.getElementById("search-form")
 const main = document.getElementById("main")
@@ -15,15 +15,13 @@ form.addEventListener("submit", (e) => {
 })
 
 
-main.addEventListener("click", (event) => {
+mainEl.addEventListener("click", (event) => {
     if (event.target.className === "add-icon") {
         editWatchlist(event.target.parentElement.value)
         event.target.parentElement.parentElement.innerHTML = `
             <p class="watchlist">
-                Already added
+                Added to watchlist
             </p>
         `
-        
     }
 })
-
