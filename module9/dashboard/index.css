@@ -26,6 +26,8 @@ main {
     justify-content: space-between;
 }
 
+/* page flexbox divs */
+
 .top-div,
 .middle-div,
 .bottom-div {
@@ -39,4 +41,27 @@ main {
 
 .middle-div {
     text-align: center;
+}
+
+/* cryptocurrency container */
+
+.crypto-container {
+}
+
+.coin-container {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    margin-bottom: 0.5em;
+}
+
+.coin-container > h3 {
+    margin: 0;
+}
+
+.coin-icon {
+    height: 25px;
+    align-self: center;
+    background-color: black;
+    border-radius: 50%;
 }
