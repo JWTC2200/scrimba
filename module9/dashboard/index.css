@@ -28,12 +28,6 @@ main {
 
 /* page flexbox divs */
 
-.top-div,
-.middle-div,
-.bottom-div {
-    padding: 15px;
-}
-
 .top-div {
     display: flex;
     justify-content: space-between;
@@ -57,11 +51,46 @@ main {
 
 .coin-container > h3 {
     margin: 0;
+    padding: 0;
+    text-shadow: 0px 0px 0.5rem black;
 }
 
 .coin-icon {
     height: 25px;
+    width: 25px;
     align-self: center;
     background-color: black;
     border-radius: 50%;
+}
+
+/* weather container styling */
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-shadow: 0px 0px 0.5rem black;
+}
+
+.weather-container > h2,
+.weather-container > h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.weather-container > h2 {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 2em;
+}
+
+/* artist container styling */
+
+#artist {
+    font-size: 0.75rem;
+    text-shadow: 0px 0px 0.5em black;
 }

@@ -1,5 +1,5 @@
 
-import { cryptoCoins, setBackground, setArtistName, renderCoinData, getCurrentTime } from "./util.js"
+import { cryptoCoins, setBackground, setArtistName, renderCoinData, getCurrentTime, updateCoinPrice, getWeatherData } from "./util.js"
 
 async function getBackground() {
     try {
@@ -35,10 +35,13 @@ async function getCoinData(coin) {
     }
 }
 
-setInterval(getCurrentTime, 1000)
-// setInterval(getCryptoCoinData, 15000)
 
+
+setInterval(getCurrentTime, 1000)
+setInterval(updateCoinPrice, 15000)
+
+getCryptoCoinData()
 getCurrentTime()
-// getCryptoCoinData()
 getBackground()
+getWeatherData()
 
