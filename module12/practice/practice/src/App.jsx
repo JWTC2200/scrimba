@@ -1,16 +1,20 @@
-import Avatar from "../components/Avatar"
-import bobZiroll from "../images/bob.jpg"
 import Menu from "../components/Menu"
+import MenuButton from "../components/MenuButton"
+import MenuDropdown from "../components/MenuDropdown"
+import MenuItem from "../components/MenuItem"
 
 function App() {
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
 
   return (
-    <>
-      <Menu
-          buttonText="Sports"
-          items={["Tennis", "Racquetball", "Pickleball", "Squash"]}
-      />
-    </>
+    <Menu>
+      <MenuButton>Sports</MenuButton>
+      <MenuDropdown>
+        {sports.map(sport => (
+          <MenuItem key={sport}>{sport}</MenuItem>
+        ))}
+      </MenuDropdown>
+    </Menu>
   )
 }
 

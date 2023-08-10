@@ -1,8 +1,12 @@
 import React from "react"
 import Button from "./Button"
+import { MenuContext } from "./Menu"
 
-export default function MenuButton({ buttonText, onClick }) {
+export default function MenuButton({ children }) {
+
+    
+
     return (
-        <Button onClick={onClick}>{buttonText}</Button>
+        <Button>{children}</Button>
     )
 }

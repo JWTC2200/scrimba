@@ -2,7 +2,10 @@ import React from "react"
 import MenuButton from "./MenuButton"
 import MenuDropdown from "./MenuDropdown"
 
-export default function Menu({ buttonText = "Menu", items }) {
+const MenuContext = React.createContext()
+
+export default function Menu({ children }) {
+
     const [open, setOpen] = React.useState(true)
 
     function toggle() {
@@ -10,13 +13,12 @@ export default function Menu({ buttonText = "Menu", items }) {
     }
 
     return (
-        <div className="menu">
-            <MenuButton
-                buttonText={buttonText}
-                onClick={toggle}
-            />
-
-            {open && <MenuDropdown items={items} />}
-        </div>
+        <MenuContext.Provider value={{open, toggle}}>
+            <div className="menu">
+                {children}
+            </div>
+        </MenuContext.Provider>
     )
 }
+
+export { MenuContext }
