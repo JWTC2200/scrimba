@@ -1,13 +1,17 @@
 import React from "react"
-import Toggle from "../Toggle/index"
+import useToggle from "../../Hooks/useToggle"
 
-export default function Menu({ children }) {
+export const MenuContext = React.createContext()
+
+export default function Menu({ children, onOpen }) {
+    const [ toggleOn, toggle ] = useToggle({initialValue: false, onToggle: onOpen})
+
     return (
-        <Toggle>
+        <MenuContext.Provider value={{toggleOn, toggle}}>
             <div className="menu">
                 {children}
             </div>
-        </Toggle>
-        
+        </MenuContext.Provider>
     )
 }
+

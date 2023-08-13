@@ -1,12 +1,14 @@
 import React from "react"
 import Button from "../Button/Button"
 import Toggle from "../Toggle"
+import { MenuContext } from "./Menu"
 
 export default function MenuButton({ children }) {
+
+    const { toggle } = React.useContext(MenuContext)
+
     return (
-        <Toggle.Button>
-            <Button>{children}</Button>
-        </Toggle.Button>
+            <Button onClick={toggle}>{children}</Button>
         
     )
 }

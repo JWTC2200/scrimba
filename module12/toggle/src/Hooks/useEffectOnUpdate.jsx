@@ -1,0 +1,12 @@
+import React from "react"
+
+export default function useEffectOnUpdate(effectFunction, deps) {
+
+    const firstRender = React.useRef(true)
+
+    React.useEffect(() => {
+        firstRender.current ? 
+            firstRender.current = false 
+            : effectFunction()
+    }, deps)
+}

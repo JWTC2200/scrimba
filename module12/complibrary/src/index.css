@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  padding-top: 20px;
+  min-height: 100vh;
+  max-width: 600px;
+  background-color: lightgray;
+  box-shadow: 0 0 10px black
+}
+
+/* Badges styling */
+
+.badge {
+  font-size: 0.875rem;
+  line-height: 1.43em;
+  font-weight: 500;
+  padding: 0.143em 0.85em;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  border-radius: 0.28em;
+}
+
+.pill {
+  border-radius: 0.85em;
+}
+
+.grey-b {
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+.red-b {
+  background: #FEE2E2;
+  color: #991B1B
+}
+
+.yellow-b {
+  background: #FEF3C7;
+  color: #92400E
+}
+
+.green-b {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.blue-b {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.indigo-b {
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.purple-b {
+  background: #EDE9FE;
+  color: #5B21B6;
+}
+
+.pink-b {
+  background: #FCE7F3;
+  color: #9D174D;
+}
+
+/* Banner styling */
+
+.banner {
+  font-size: 0.875rem;
+  line-height: 1.43em;
+  border-radius: 0.43em;
+  font-weight: 400;
+  padding: 0.8em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 
+    "icon title"
+    "none content";
+  justify-content: start;
+  align-items: start;
+}
+
+.icon { 
+  font-size: 1.25rem;
+  grid-area: icon;
+  margin-right: 0.5em;
+}
+
+.banner-title {
+  font-weight: 500;
+  grid-area: title;
+}
+
+.content {
+  margin-top: 0.25em;
+  grid-area: content;
+}
+
+.success {
+  background: #ECFDF5;
+  color: #047857;
+}
+
+.success .banner-title {
+  color: #065F46;
+}
+
+.success .icon {
+  color: #34D399;
+}
+
+.warning {
+  background: #FFFBEB;
+  color: #B45309;
+}
+
+.warning .banner-title {
+  color: #92400E;
+}
+
+.warning .icon {
+  color: #FBBF24;
+}
+
+.error {
+  background: #FEF2F2;
+  color: #B45309;
+}
+
+.error .banner-title {
+  color: #92400E;
+  font-weight: 700;
+}
+
+.error .icon {
+  color: #F87171
+}
+
+.neutral {
+  background: #EFF6FF;
+  color: #1C51B9;
+}
+
+.neutral {
+  color: #1E40AF;
+}
+
+.neutral .icon {
+  color: #60A5FA;
+}
+
+/* Card styling */
+
+.card {
+  padding-top: 1.25em;
+  width: 384px;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card-inner {
+  background: #F9FAFB;
+  position: relative;
+  padding: 1.5em 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.card-inner:hover {
+  box-shadow: 0 0.25em 1.56em 0 #0000001A;
+}
+
+
+.card-icon {
+  background: #3F75FE;
+  color: white;
+  font-size: 1.25rem;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 1em 0;
+}
