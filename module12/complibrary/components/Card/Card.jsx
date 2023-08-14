@@ -1,4 +1,5 @@
 import { HiOutlineCloudUpload } from "react-icons/Hi"
+import "./card.css"
 
 export default function Card({children, icon=<HiOutlineCloudUpload/>, title="Title here"}) {
     return (

@@ -1,0 +1,63 @@
+/* Badges styling */
+
+.badge {
+    font-size: 0.875rem;
+    line-height: 1.43em;
+    font-weight: 500;
+    padding: 0.143em 0.85em;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25em;
+  }
+  
+  .square {
+    border-radius: 0.28em;
+  }
+  
+  .pill {
+    border-radius: 0.85em;
+  }
+  
+  .grey-b {
+    background: #F3F4F6;
+    color: #1F2937;
+  }
+  
+  .red-b {
+    background: #FEE2E2;
+    color: #991B1B
+  }
+  
+  .yellow-b {
+    background: #FEF3C7;
+    color: #92400E
+  }
+  
+  .green-b {
+    background: #D1FAE5;
+    color: #065F46;
+  }
+  
+  .blue-b {
+    background: #DBEAFE;
+    color: #1E40AF;
+  }
+  
+  .indigo-b {
+    background: #E0E7FF;
+    color: #3730A3;
+  }
+  
+  .purple-b {
+    background: #EDE9FE;
+    color: #5B21B6;
+  }
+  
+  .pink-b {
+    background: #FCE7F3;
+    color: #9D174D;
+  }
+  
+  

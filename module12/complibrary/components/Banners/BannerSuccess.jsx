@@ -1,4 +1,5 @@
 import { AiFillCheckCircle} from "react-icons/ai"
+import "./banner.css"
 
 export default function BannerSuccess({children, title="Title here"}) {
     return (

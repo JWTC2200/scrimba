@@ -1,6 +1,7 @@
 import { AiFillCheckCircle} from "react-icons/ai"
 import { IoIosWarning, IoIosCloseCircle } from "react-icons/Io"
 import  { HiInformationCircle } from "react-icons/Hi"
+import "./banner.css"
 
 export default function Banner({children, status="neutral", title="Title here" }) {
 

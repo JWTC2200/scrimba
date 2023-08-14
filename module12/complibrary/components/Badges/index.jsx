@@ -1,8 +1,9 @@
 import Badge from "./Badge";
 import BadgeSquare from "./BadgeSquare";
 import BadgePill from "./BadgePill";
+import "./badge.css"
 
-Badge.square = BadgeSquare
-Badge.pill = BadgePill
+Badge.Square = BadgeSquare
+Badge.Pill = BadgePill
 
 export default Badge
