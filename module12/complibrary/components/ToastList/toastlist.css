@@ -1,0 +1,18 @@
+.toast-list {
+    position: fixed;
+    width: 100%;
+    max-width: 300px;
+    max-height: 80vh;
+    overflow: hidden auto;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes toast-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

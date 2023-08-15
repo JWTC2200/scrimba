@@ -1,0 +1,49 @@
+.about-container {
+    margin: 0;
+    padding: 0;
+}
+
+.about-header-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-info {
+    padding: 1.5rem;
+}
+
+.about-info > h1 {
+    padding: .7em 0 0.5em 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-info > p {
+    font-weight: 500;
+}
+
+.about-catch-box {
+    background: #FFCC8D;
+    border-radius: 0.5em;
+    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    margin-top: 2.4rem;
+}
+
+.about-catch-box > h2 {
+    padding: 0;
+    margin: 0 0 1.4em 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about-button {
+    text-decoration: none;
+    background: #161616;
+    border-radius: 0.5em;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8em 1em;
+}

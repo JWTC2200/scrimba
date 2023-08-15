@@ -1,4 +1,5 @@
 import classnames from "classnames"
+import "./badge.css"
 
 export default function BadgePill({children, color="grey"}) {
 

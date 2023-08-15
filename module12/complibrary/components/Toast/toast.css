@@ -1,0 +1,87 @@
+/* Toast styling */
+
+.toast {
+    font-weight: 400;
+    font-size: 0.875rem;
+    display: grid;
+    justify-content: start;
+    gap: 0.25em;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "icon title"
+    ". text";
+    background-color: white;
+    color: black;
+    width: 300px;
+    border-radius: 0.5em;;
+    padding: 0.8em;
+    opacity: 0.8;
+}
+
+.toast-icon {
+    grid-area: icon;
+    font-size: 1.125rem;
+}
+
+.toast-title {
+    grid-area: title;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.toast-text {
+    grid-area: text;
+}
+
+
+.toast-success {
+    background-color: #ECFDF5;
+    color: #047857
+}
+
+.toast-success > .toast-title {
+    color: #065F46;
+}
+
+.toast-success > .toast-icon {
+    color: #34D399
+}
+
+.toast-warning {
+    background-color: #FFFBEB;
+    color: #B45309
+}
+
+.toast-warning > .toast-title {
+    color: #92400E;
+}
+
+.toast-warning > .toast-icon {
+    color: #FBBF24
+}
+
+.toast-info {
+    background-color: #EFF6FF;
+    color: #1C51B9
+}
+
+.toast-info > .toast-title {
+    color: #1E40AF;
+}
+
+.toast-info > .toast-icon {
+    color: #60A5FA
+}
+
+.toast-error {
+    background-color: #FEF2F2;
+    color: #B45309
+}
+
+.toast-error > .toast-title {
+    color: #92400E;
+}
+
+.toast-error > .toast-icon {
+    color: #F87171
+}

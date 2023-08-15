@@ -16,8 +16,8 @@
     color: #C7C7C7;
     border-radius: 6px;
     position: absolute;
-    bottom: 120%;
-    left: 0%;
+    bottom: 2.5em;
+    left: 0.5em;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-areas: 

@@ -1,0 +1,32 @@
+.home-container {
+    background-size: cover;
+    padding:  3.5em 1.5em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container > h1 {
+    font-weight: 800;
+    font-size: 2.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+.home-container > p {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.home-find-van-button {
+    text-decoration: none;
+    color: white;
+    background-color: #FF8C38;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2em;
+    padding: 0.9em;
+    border-radius: 0.5em;
+}
