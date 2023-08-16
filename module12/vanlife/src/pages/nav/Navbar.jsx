@@ -8,7 +8,10 @@ export default function Navbar() {
 
     const linkElements = linkArray.map(link => {
         return (
-            <Link key={link} to={`/${link}`}>{link}</Link>
+            <Link 
+                key={link} 
+                to={`/${link}`}>{link}
+            </Link>
         )
     })
 
