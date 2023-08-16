@@ -52,3 +52,8 @@
     background: none;
     text-decoration: underline;
 }
+
+.btns.naked:hover {
+    color: white;
+    text-shadow: 0 0 10px black;
+}

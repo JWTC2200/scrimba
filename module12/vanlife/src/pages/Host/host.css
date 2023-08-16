@@ -1,0 +1,8 @@
+.hostpage-container {
+    padding: 0 1.5rem;
+}
+
+.hostpage-navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
