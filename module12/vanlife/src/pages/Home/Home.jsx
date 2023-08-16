@@ -3,6 +3,7 @@ import "./home.css"
 import vanlifeBg from "../../assets/images/vanlife_mountains.png"
 
 export default function Home() {
+
     return(
         <div 
             className="home-container" 

@@ -1,0 +1,53 @@
+.btns {
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6.5em;
+    padding: 0.5em 0;
+    margin: 0.25em 1em 0.25em 0;
+    text-align: center;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+}
+
+.btns.btn-stretch {
+    width: fit-content
+}
+
+.btns.btn-full {
+    width: 100%
+}
+
+.btns.btn-tall {
+    padding: 0.75em 0;
+}
+
+.btns.simple:hover,
+.btns.simple.on {
+    background: #E17654;
+    color: #FFEAD0;
+}
+
+.btns.luxury:hover,
+.btns.luxury.on  {
+    background: #161616;
+    color: #FFEAD0;
+}
+
+.btns.rugged:hover,
+.btns.rugged.on {
+    background: #115E59;
+    color: #FFEAD0;
+}
+
+.btns.orange:hover,
+.btns.orange.on {
+    background: #FF8C38;
+    color: white;
+}
+
+.btns.naked {
+    background: none;
+    text-decoration: underline;
+}

@@ -1,0 +1,63 @@
+.van-listing-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "image name"
+    "image price"
+    "image button";
+    align-items: center;
+    justify-items: start;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.van-listing-image {
+    max-width: 200px;
+    object-fit: cover;
+    grid-area: image;
+    border-radius: 0.5rem;
+}
+
+.van-listing-name {
+    grid-area: name;
+    margin: 0;
+    padding: 0;
+}
+
+.van-listing-price {
+    grid-area: price;
+}
+
+.van-listing-price > span {
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.van-listing-price,
+.van-listing-name {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.van-listing-button {
+    grid-area: button;
+}
+
+@media (min-width: 550px) {
+    .van-listing-container {
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "image image image"
+        "name name price"
+        "button button price";
+    }
+
+    .van-listing-price {
+        align-self: start;
+    }
+
+    .van-listing-image {
+        max-width: 240px;
+    }
+}

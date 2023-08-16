@@ -13,14 +13,14 @@ export default function Navbar() {
     })
 
     return (
-        <div className="navbar-container">
+        <header className="navbar-container">
             <Link to="/">
                 <img src={vanlifeLogo} className="navbar-logo"/>
             </Link>
             <div className="navbar-links">
                 {linkElements}
             </div>
-        </div>
+        </header>
     )
 
 }

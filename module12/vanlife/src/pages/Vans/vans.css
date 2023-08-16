@@ -1,0 +1,20 @@
+.vans-page-container {
+    padding: 0 1.5rem;
+}
+
+.vans-page-container > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.vans-page-search-filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 550px) {
+    .vans-page-listing-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
