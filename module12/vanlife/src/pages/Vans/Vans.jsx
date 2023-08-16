@@ -37,9 +37,9 @@ export default function Vans() {
         <div className="vans-page-container">
             <h1>Explore our van options</h1>
             <div className="vans-page-search-filters">
-                <Button styling="orange">Simple</Button>
-                <Button styling="black">Luxury</Button>
-                <Button styling="green">Rugged</Button>
+                <Button styling="simple">Simple</Button>
+                <Button styling="luxury">Luxury</Button>
+                <Button styling="rugged">Rugged</Button>
                 <Button styling="naked">clear Filters</Button>
             </div>
             <div className="vans-page-listing-container">
