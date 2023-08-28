@@ -6,3 +6,41 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+/* host van listing styling */
+
+.host-van-listing {
+    border-radius: 0.5em;
+    background-color: white;
+    padding: 1.15em;
+    margin-bottom: 0.75em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+}
+
+.host-van-listing-image {
+    width: 4.125rem;
+    border-radius: 0.5em;
+    margin-right: 1rem;
+}
+
+.host-van-listing-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.host-van-listing-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.host-van-listing-price {
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.host-van-listing:hover {
+    box-shadow: 0 0 4px black;
+}

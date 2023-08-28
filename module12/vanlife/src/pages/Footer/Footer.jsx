@@ -3,7 +3,7 @@ import { AiOutlineCopyright, AiOutlineArrowLeft, AiOutlineArrowRight } from "rea
 
 export default function Footer() {
     return (
-        <div className="footer-container">
+        <footer className="footer-container">
             <p style={{display: "flex", alignItems:"center"}}>
                 <AiOutlineCopyright className="footer-icon"/>
                 &nbsp;2023 #VANLIFE
@@ -16,6 +16,6 @@ export default function Footer() {
                 &nbsp; Link to Github repository &nbsp; 
                 <AiOutlineArrowLeft />
             </a>
-        </div>
+        </footer>
     )
 }

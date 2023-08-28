@@ -1,0 +1,35 @@
+.host-van-page-container {
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.host-van-page-basic-details {
+    display: flex;
+    gap: 1rem;
+}
+
+.host-van-page-basic-image {
+    width: 10rem;
+    border-radius: 0.2rem;
+}
+
+.host-van-page-basic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.host-van-page-navbar {
+    display: flex;
+}
+
+.host-van-page-photos-photo {
+    width: 6.4rem;
+    border-radius: 0.25rem;
+}

@@ -26,7 +26,8 @@
 }
 
 .navbar-links > a:hover,
-.navbar-links > a:active {
+.navbar-links > a:active,
+.navbar-links > a.isActive {
     color: #161616;
     text-decoration: underline;
 }

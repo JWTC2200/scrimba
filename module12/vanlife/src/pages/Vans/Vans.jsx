@@ -1,11 +1,16 @@
 import React from "react"
 import Button from "../../components/Button/Button"
 import VanListing from "../../components/VanListing/VanListing"
-
-
 import "./vans.css"
+import { useSearchParams } from "react-router-dom"
 
 export default function Vans() {
+
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const typeFilter = searchParams.get("type")
+    console.log(typeFilter)
 
     const [vansData, setVansData] = React.useState([])
 
