@@ -60,3 +60,8 @@
     color: white;
     text-shadow: 0 0 10px black;
 }
+
+.btns.black {
+    background-color: black;
+    color: white;
+}

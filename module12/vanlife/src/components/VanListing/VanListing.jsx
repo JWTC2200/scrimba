@@ -1,11 +1,9 @@
 import "./vanlisting.css"
-import { Link } from "react-router-dom"
 import Button from "../Button/Button"
 
 export default function VanListing({id, name, price, imageUrl, type}) {
 
     return (
-        <Link to={`/vans/${id}`}>
             <div 
                 key={id}
                 className="van-listing-container"
@@ -23,7 +21,5 @@ export default function VanListing({id, name, price, imageUrl, type}) {
                     <span>/day</span>
                 </div>
             </div>
-        </Link>
-        
     )
 }

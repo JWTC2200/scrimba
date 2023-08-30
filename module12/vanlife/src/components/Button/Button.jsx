@@ -1,11 +1,11 @@
 import "./button.css"
 
-export default function Button({children, styling="", onClick=()=>{}, classes=""}) {
+export default function Button({children, styling="", click=()=>{}, classes=""}) {
 
     return (
         <div 
             className={`btns ${styling} ${classes}`}
-            onClick={()=>onClick()}
+            onClick={()=>click()}
         >
             {children}
         </div>

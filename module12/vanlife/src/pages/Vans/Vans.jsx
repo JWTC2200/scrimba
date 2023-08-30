@@ -2,54 +2,66 @@ import React from "react"
 import Button from "../../components/Button/Button"
 import VanListing from "../../components/VanListing/VanListing"
 import "./vans.css"
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams, Link } from "react-router-dom"
+import { fetchVansData } from "../../api"
 
 export default function Vans() {
 
-
     const [searchParams, setSearchParams] = useSearchParams()
-
     const typeFilter = searchParams.get("type")
-    console.log(typeFilter)
-
     const [vansData, setVansData] = React.useState([])
+    const [loading, setLoading] = React.useState(false)
 
-    const vansElements = vansData && vansData.map(van => {
+    const displayedVans = typeFilter 
+        ? vansData.filter(van => van.type.toLowerCase() === typeFilter) 
+        : vansData
+
+    const vansElements = displayedVans.map(van => {
         return (
-            <VanListing key={van.id} {...van}></VanListing>
+            <Link to={`/vans/${van.id}`} state={{searchParams: searchParams.toString() }}>
+                <VanListing key={van.id} {...van}></VanListing>
+            </Link>
         )
     })
 
     React.useEffect(() => {
-        async function fetchVansData() { 
-            try {
-                const res = await fetch("/api/vans")
-                if(!res.ok) {
-                    throw Error(`${res.status}: ${res.statusText}`)
-                } else {
-                    const data = await res.json()
-                    setVansData(data.vans)
-                }
-            } catch(error) {
-                console.log(error)
-            }
+        async function loadVans() {
+            setLoading(true)
+            const data = await fetchVansData()            
+            setVansData(data)
+            setLoading(false)
         }
-        fetchVansData()
+        loadVans()
     }, [])
 
+    function handleSearchFilter(key, value) {
+        setSearchParams(prevParams => {
+            if (value === null) {
+                prevParams.delete(key)
+            } else {
+                prevParams.set(key, value)
+            }
+            return prevParams
+        })
+    }
 
     return (
         <div className="vans-page-container">
             <h1>Explore our van options</h1>
             <div className="vans-page-search-filters">
-                <Button styling="simple">Simple</Button>
-                <Button styling="luxury">Luxury</Button>
-                <Button styling="rugged">Rugged</Button>
-                <Button styling="naked">clear Filters</Button>
+                <Button styling={`simple ${typeFilter === "simple" && "on"}`} click={() => handleSearchFilter("type", "simple")}>Simple</Button>
+                <Button styling={`luxury ${typeFilter === "luxury" && "on"}`} click={() => handleSearchFilter("type", "luxury")}>Luxury</Button>
+                <Button styling={`rugged ${typeFilter === "rugged" && "on"}`} click={() => handleSearchFilter("type", "rugged")}>Rugged</Button>
+                {typeFilter && 
+                    <Button styling="naked" click={() => handleSearchFilter("type", null)}>clear Filters</Button>}
             </div>
-            <div className="vans-page-listing-container">
-                {vansElements}
-            </div>            
+            {
+                loading 
+                    ? <h1>Loading...</h1> 
+                    : <div className="vans-page-listing-container">
+                        {vansElements}
+                    </div>
+            }                
         </div>
         
     )

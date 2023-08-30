@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useLocation } from "react-router-dom"
 import Button from "../../components/Button/Button"
 import "./vanpage.css"
 import { BsArrowLeft } from "react-icons/bs"
@@ -8,8 +8,10 @@ export default function VanPage() {
     const params = useParams()
 
     const [vanData, setVanData] = React.useState({})
-    
-
+    const location = useLocation()
+    const returnParams = location.state.searchParams != null ? `?${location.state.searchParams}` : ""
+    console.log(location.state.searchParams.split("=")[1])
+    const returnString = location.state.searchParams != null ? location.state.searchParams.split("=")[1] : null
     
     React.useEffect(() => {
         async function fetchVanData() { 
@@ -30,10 +32,13 @@ export default function VanPage() {
 
     return (
         <div className="vanpage-container">
-            <Link to="/vans" style={{display: "flex", alignItems:"center"}}>
+            <Link 
+                to={`..${returnParams}`} 
+                relative="path"
+                style={{display: "flex", alignItems:"center"}}>
                 <BsArrowLeft />
                 &nbsp;
-                <Button styling="naked btn-stretch">Back to all vans</Button>
+                <Button styling="naked btn-stretch">{`Back to ${returnString ? returnString + " " : "all "}vans`}</Button>
             </Link>
             <img src={vanData.imageUrl} className="vanpage-image"/>
             <Button styling={`on ${vanData.type}`}>{vanData.type}</Button>

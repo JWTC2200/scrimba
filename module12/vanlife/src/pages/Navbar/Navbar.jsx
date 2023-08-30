@@ -1,6 +1,7 @@
 import "./navbar.css"
 import { NavLink, Link } from "react-router-dom"
 import vanlifeLogo from "../../assets/images/vanlife_logo.png"
+import { RxAvatar } from "react-icons/rx"
 
 export default function Navbar() {
 
@@ -28,7 +29,11 @@ export default function Navbar() {
                 >
                     Vans
                 </NavLink>
-                
+                <NavLink 
+                    to="/login"
+                >
+                    {<RxAvatar className="fs20" />}
+                </NavLink>
             </div>
         </header>
     )
