@@ -7,10 +7,14 @@
     justify-content: space-evenly;
 }
 
+.host-graph {
+    max-width: 100%;
+}
+
 /* host dashboard styling */
 
 .host-dash-welcome {
-    padding: 0.75rem 0.5rem;
+    padding: 1.75rem 0.5rem 1rem 0.5rem;
     background-color: #FFEAD0;
 }
 
@@ -72,4 +76,23 @@
 
 .host-van-listing:hover {
     box-shadow: 0 0 4px black;
+}
+
+/* host income styling */
+
+.host-income-container,
+.host-reviews-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.host-income-transaction {
+    background: white;
+    padding: 1rem 0.75rem;
+}
+
+.m4 {
+    margin-top: 1rem
 }

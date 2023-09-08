@@ -68,3 +68,9 @@ a {
 .semibold {
   font-weight: semibold
 }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
