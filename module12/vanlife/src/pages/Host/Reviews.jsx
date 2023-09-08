@@ -26,7 +26,6 @@ export default function Reviews() {
             <BsStarFill className="review-star" key={i} />
         ))
 
-
         return(
             <div key={review.id}>
                 <div className="review">
@@ -41,7 +40,6 @@ export default function Reviews() {
             </div>
         )
     })
-
 
     return (
         <div className="host-reviews-container">
