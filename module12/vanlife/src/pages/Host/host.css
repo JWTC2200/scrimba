@@ -96,3 +96,35 @@
 .m4 {
     margin-top: 1rem
 }
+
+/* host review styling */
+
+.host-reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review {
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.review-star {
+    color: #FF8C38;
+    margin-right: 0.25rem;
+}
+
+.review-info {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.review-name {
+    font-weight: bold;
+}
+
+.review-date {
+    color: #8C8C8C;
+}
