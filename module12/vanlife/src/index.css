@@ -15,6 +15,11 @@ body {
   background-color: #FFF7ED;
 }
 
+.mp0 {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -50,4 +55,16 @@ a {
 
 .fs14 {
   font-size: 0.875rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.semibold {
+  font-weight: semibold
 }

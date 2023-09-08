@@ -7,6 +7,35 @@
     justify-content: space-evenly;
 }
 
+/* host dashboard styling */
+
+.host-dash-welcome {
+    padding: 0.75rem 0.5rem;
+    background-color: #FFEAD0;
+}
+
+.host-dash-welcome-income,
+.host-dash-vans-nav,
+.host-dash-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+} 
+
+.host-dash-vans-nav {
+    padding: 0.75rem 0.5rem  0 0.5rem;
+}
+
+.host-dash-welcome-earned {
+    font-weight: bold;
+}
+
+.host-dash-review {
+    background-color: #FFDDB2;
+    padding: 1.75rem 0.5rem
+}
+
+
 /* host van listing styling */
 
 .host-van-listing {
