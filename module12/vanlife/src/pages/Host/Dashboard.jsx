@@ -35,7 +35,7 @@ export default function Dashboard() {
             </section>
             <section className="host-dash-review">
                 <div>Review score &#11088;<span className="bold"> 5.0</span>/5</div>
-                <div>Details</div>
+                <Link to="reviews">Details</Link>
             </section>
             <section className="host-dash-vans">
                 <section className="host-dash-vans-nav">
